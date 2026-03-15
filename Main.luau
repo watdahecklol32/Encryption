@@ -4,7 +4,7 @@
 local crypt: (msg: buffer, key: buffer) -> buffer = @native function(msg: buffer, key: buffer): buffer
 	local msg_len: number = buffer.len(msg);
 	local result: buffer = buffer.create(msg_len);
-	local rounds: number = 2;
+	local rounds: number = 20;
 	local key_len: number = buffer.len(key);
 	local z: buffer = buffer.create(120);
 	local x: buffer  = buffer.create(120);
